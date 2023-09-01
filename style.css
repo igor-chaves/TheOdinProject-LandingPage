@@ -57,11 +57,16 @@ header a:hover {
 /* HERO -------------------------------------------------- HERO */
 .hero .container {
    display: flex;
+   flex-wrap: wrap-reverse;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
    gap: 50px;
 }
 
 .content {
    color: white;
+   max-width: 40%;
 }
 
 .content h1 {
@@ -91,12 +96,11 @@ header a:hover {
    color: rgb(255, 238, 0)
 }
 
-.image {
-   max-width: 500px;
-}
-
 .image img {
-   width: 100%;
+   margin: 0 50px;
+   max-height: 300px;
+   max-width: 400px;
+   object-fit: cover;
 }
 
 
@@ -104,6 +108,7 @@ header a:hover {
 .random-info .container {
    justify-content: center;
    flex-direction: column;
+   text-align: center;
 }
 
 .random-info h2 {
@@ -128,9 +133,10 @@ header a:hover {
 
 .random-info img {
    width: 200px;
-   height: 200px;
+   height: 300px;
    border-radius: 10px;
    margin-bottom: 10px;
+   object-fit: cover;
 }
 
 
@@ -142,6 +148,7 @@ header a:hover {
 
 .quote-msg .container {
    flex-direction: column;
+   margin: 0 50px;
    gap: 15px;
 }
 
@@ -162,12 +169,13 @@ header a:hover {
 .sign-up .container {
    background: rgb(255, 221, 0);
    border-radius: 10px;
-   margin: 20px;
-   padding: 50px 150px;
+   margin: 0 50px;
+   padding: 50px;
    color: #1f2937;
 
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-around;
    gap: 20px;
 }
 
@@ -197,4 +205,22 @@ footer .container {
    color: white;
    flex: none;
    margin: 20px 0;
+}
+
+
+/* MEDIA QUERIES -------------------------------------------------- MEDIA QUERIES */
+@media (max-width: 1080px) {
+   .hero .container .content {
+      max-width: 100%;
+      margin: 0 50px;
+   }
+
+   .quote-msg .quote-text {
+      font-size: 24px;
+      font-style: italic;
+   }
+
+   .quote-msg .author {
+      font-size: 1.5rem;
+   }
 }
